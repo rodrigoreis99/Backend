@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "19d99e9b-3f2b-47b8-aa8d-d3308233ec1c",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18955856",
+		"_collection_link": "https://www.postman.com/universal-water-137567/workspace/backend/collection/18955856-19d99e9b-3f2b-47b8-aa8d-d3308233ec1c?action=share&source=collection_link&creator=18955856"
+	},
+	"item": [
+		{
+			"name": "create",
+			"protocolProfileBehavior": {
+				"protocolVersion": "auto"
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"macaddress\": \"00:1B:44:11:3A:B7\",\r\n    \"type\": 1,\r\n    \"title\": \"Estudar\",\r\n    \"description\": \"Lógica de programação\",\r\n    \"when\": \"2025-04-09T13:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{conexão}}/task",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"macaddress\": \"00:1B:44:11:3A:B7\",\r\n    \"type\": 1,\r\n    \"title\": \"Minha Tarefa\",\r\n    \"description\": \"Treinar\",\r\n    \"when\": \"2025-04-08T15:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{conexão}}/task/67eeeccd83073da64481115b",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"67eeeccd83073da64481115b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/filter/all/00:1B:44:11:3A:B7",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"all",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/67eeeccd83073da64481115b",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"67eeeccd83073da64481115b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/67eeeccd83073da64481115b",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"67eeeccd83073da64481115b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Done",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/67f52b76ad65c1fc7b8f5f4b/true",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"67f52b76ad65c1fc7b8f5f4b",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Late",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/filter/late/00:1B:44:11:3A:B7",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"late",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/filter/today/00:1B:44:11:3A:B7",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"today",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Week",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{conexão}}/task/filter/week/00:1B:44:11:3A:B7",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"week",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Month",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"macaddress\":\"00:1B:44:11:3A:B7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{conexão}}/task/filter/month",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Year",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"macaddress\":\"00:1B:44:11:3A:B7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{conexão}}/task/filter/year",
+					"host": [
+						"{{conexão}}"
+					],
+					"path": [
+						"task",
+						"filter",
+						"year"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
