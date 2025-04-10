@@ -4,6 +4,7 @@ import * as S from './styles';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import FilterCard from '../../components/FilterCard';
+import TaskCard from '../../components/taskCard';
 
 function Home() {
   const [filterActived, setFilterActived] = useState('today');
@@ -34,6 +35,23 @@ function Home() {
         </button>
 
       </S.FilterArea>
+
+      <S.Title>
+        <h3>Tarefas</h3>
+      </S.Title>  
+
+      <S.Content>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+        <TaskCard/>
+      </S.Content>
       <Footer/>
     </S.Container>
   
