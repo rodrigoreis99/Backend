@@ -30,27 +30,29 @@ export const RightSide  = styled.div`
     align-items: center;
     justify-content: flex-end;
 
-    a{
-        color: #F4F4F4;
-        font-family: 'Inter', sans-serif;
-        font-weight:600;
-        font-size: 13px;
+    button {
+      background:none;
+      border:none;
+      cursor: pointer;
+    }
+
+    a, button {
+        color:#fff;
+        font-weight: bold;
         text-decoration: none;
         margin: 0 10px;
 
-        &:hover{
+        &:hover {
             color: #F36C21;
         }
-    }
-
-    #notification{
-        img{
-           width: 25px;
-           height: 30px; 
+        
+        img {
+            width: 25px;
+            height: 30px
         }
 
         span{
-            background: #F4F4F4;
+            background: #fff;
             color: #ee6b26;
             padding: 3px 7px;
             border-radius:50%;
@@ -63,9 +65,10 @@ export const RightSide  = styled.div`
             opacity: 0.5;
         }
     }
+    
     .dividir::after{
         content:"|";
-        mergin:0 10px;
+        margin:0 10px;
         color: #F4F4F4;
     }
 `;
