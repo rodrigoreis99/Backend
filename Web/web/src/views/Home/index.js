@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import * as S from './styles';
+import{Link} from 'react-router-dom';
 import api from '../../services/api';
+
 //componentes
 import Header from '../../components/header';
 import Footer from '../../components/footer';
@@ -41,7 +43,7 @@ function Home() {
 
       <S.FilterArea>
         <button type="button" onClick={() => setFilterActived("all")}>
-        <FilterCard title="Todos" selected={filterActived == 'all'} />
+        <FilterCard title="Todos" selected={filterActived === 'all'} />
         </button>
 
         <button type="button" onClick={() => setFilterActived("today")}>
@@ -69,7 +71,9 @@ function Home() {
       <S.Content>
         {
           tasks.map(t =>(
-           <TaskCard type={t.type} title={t.title} when={t.when}/>
+            <Link to={`/task/${t._id}`}>
+              <TaskCard type={t.type} title={t.title} when={t.when}/>
+           </Link>
           ))
         }
         

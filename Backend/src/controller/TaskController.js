@@ -3,7 +3,6 @@ const TaskModel = require('../model/TaskModel');
 const { startOfDay, endOfDay,startOfWeek, endOfWeek,startOfMonth,
     endOfMonth,startOfYear,endOfYear} = require('date-fns');
 
-const currentDate = new Date();
 
 class TaskController{
     async create(req, res){
@@ -76,6 +75,7 @@ class TaskController{
     }
 
     async late(req,res){
+        const currentDate = new Date();
         await TaskModel
         .find({
             'when': {'$lt':currentDate},
@@ -92,6 +92,7 @@ class TaskController{
     }
 
     async today(req,res){
+        const currentDate = new Date();
         await TaskModel
                 .find({
                     'macaddress':{'$in':req.params.macaddress},
@@ -107,6 +108,7 @@ class TaskController{
     }
 
     async week(req,res){
+        const currentDate = new Date();
         await TaskModel
                 .find({
                     'macaddress':{'$in':req.params.macaddress},
@@ -122,6 +124,7 @@ class TaskController{
     }
 
     async month(req,res){
+        const currentDate = new Date();
         await TaskModel
                 .find({
                     'macaddress':{'$in':req.params.macaddress},
@@ -137,6 +140,7 @@ class TaskController{
     }
 
     async year(req,res){
+        const currentDate = new Date();
         await TaskModel
                 .find({
                     'macaddress':{'$in':req.params.macaddress},

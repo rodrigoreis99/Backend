@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\controller\\TaskController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\controller\\TaskController.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\routes\\TaskRoutes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\routes\\TaskRoutes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\middlewares\\TaskValidation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\middlewares\\TaskValidation.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\config\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\config\\database.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\model\\TaskModel.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\model\\TaskModel.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "database.js",
+              "DocumentMoniker": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\config\\database.js",
+              "RelativeDocumentMoniker": "src\\config\\database.js",
+              "ToolTip": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\config\\database.js",
+              "RelativeToolTip": "src\\config\\database.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T14:37:42.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskValidation.js",
+              "DocumentMoniker": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\middlewares\\TaskValidation.js",
+              "RelativeDocumentMoniker": "src\\middlewares\\TaskValidation.js",
+              "ToolTip": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\middlewares\\TaskValidation.js",
+              "RelativeToolTip": "src\\middlewares\\TaskValidation.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T14:37:21.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskModel.js",
+              "DocumentMoniker": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\model\\TaskModel.js",
+              "RelativeDocumentMoniker": "src\\model\\TaskModel.js",
+              "ToolTip": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\model\\TaskModel.js",
+              "RelativeToolTip": "src\\model\\TaskModel.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T14:37:16.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskRoutes.js",
+              "DocumentMoniker": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\routes\\TaskRoutes.js",
+              "RelativeDocumentMoniker": "src\\routes\\TaskRoutes.js",
+              "ToolTip": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\routes\\TaskRoutes.js",
+              "RelativeToolTip": "src\\routes\\TaskRoutes.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T14:36:21.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskController.js",
+              "DocumentMoniker": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\controller\\TaskController.js",
+              "RelativeDocumentMoniker": "src\\controller\\TaskController.js",
+              "ToolTip": "C:\\Dev\\Pessoal\\udemy\\csharp\\TaskBloom\\Backend\\src\\controller\\TaskController.js",
+              "RelativeToolTip": "src\\controller\\TaskController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-22T14:34:15.283Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
