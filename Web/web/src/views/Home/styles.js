@@ -4,6 +4,7 @@ export const Container = styled.div`
         width: 100%;
         min-height: 100vh;
         background: #20103B; // fundo da home no padrão da paleta
+        padding-bottom: 80px;
     
 `;
 

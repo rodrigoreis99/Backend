@@ -1,21 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import * as S from './styles';
-import {format} from 'date-fns';
+import {format, set} from 'date-fns';
 
 import api from '../../services/api';
+import isConnected from '../../utils/isConnected';
 //componentes
 import Header from '../../components/header';
 import Footer from '../../components/footer';
 import TypeIcons from '../../utils/typeIcons';
 
-import iconCalendar from '../../assets/calendar.png';
-import iconClock from '../../assets/clock.png';
-
 
 function Task({match}) {
     const [redirect, setRedirect] = useState(false);
-    const [lateCount,setLateCount] = useState();
     const [type, setType] = useState();
     const [id, setId]= useState();
     const [done, setDone]= useState(false);
@@ -23,20 +20,12 @@ function Task({match}) {
     const [description, setDescription]= useState();
     const [date, setDate]= useState();
     const [hour, setHour]= useState();
-    const [macaddress, setMacaddress]= useState('00:1B:44:11:3A:B7');
-  
-
-  async function LateVerify(){
-    await api.get(`/task/filter/late/00:1B:44:11:3A:B7`)
-    .then(response =>{
-        setLateCount(response.data.length)
-    })
-  }
 
   async function LoadTaskDetails() {
     await api.get(`/task/${match.params.id}`)
     .then(response => {
       setType(response.data.type)
+      setDone(response.data.done)
       setTitle(response.data.title)
       setDescription(response.data.description)
       setDate(format (new Date(response.data.when), 'yyyy-MM-dd'))
@@ -58,7 +47,6 @@ function Task({match}) {
   
     let when = `${date}T${hour}:00.000`;
   
-    // ✅ Garante que a data/hora seja sempre no futuro (acrescenta 1 min se necessário)
     if (match.params.id) {
       const whenDate = new Date(when);
       const now = new Date();
@@ -75,7 +63,7 @@ function Task({match}) {
     try {
       if (match.params.id) {
         await api.put(`/task/${match.params.id}`, {
-          macaddress,
+          macaddress: isConnected,
           done,
           type,
           title,
@@ -84,7 +72,7 @@ function Task({match}) {
         });
       } else {
         await api.post('/task', {
-          macaddress,
+          macaddress: isConnected,
           type,
           title,
           description,
@@ -99,9 +87,17 @@ function Task({match}) {
     }
   }
   
+  async function Remove(){
+    const res = window.confirm('Deseja realmente remover a tarefa:')
+    if(res==true){
+     await api.delete(`/task/${match.params.id}`)
+     .then(() => setRedirect(true))
+    }
+  }
 
   useEffect(()=>{
-    LateVerify();
+    if(!isConnected)
+      setRedirect(true);
     if (match.params.id) {
       LoadTaskDetails();
     }
@@ -110,7 +106,7 @@ function Task({match}) {
   return (
     <S.Container>
       {redirect ? <Redirect to="/" /> : null }
-      <Header lateCount={lateCount}/>
+      <Header/>
       <S.Form>
         <S.TypeIcons>
           {
@@ -143,7 +139,7 @@ function Task({match}) {
           <input type="date" placeholder='Data da tarefa...'
             onChange={e => setDate(e.target.value)} value={date}
           />
-          <img src={iconCalendar} alt="Calendário"/>
+          
         </S.Input>
 
       <S.Input>
@@ -151,7 +147,7 @@ function Task({match}) {
           <input type="time" placeholder='Hora da tarefa...'
             onChange={e => setHour(e.target.value)}value={hour}
           />
-          <img src={iconClock} alt="Relógio"/>
+          
         </S.Input> 
 
         <S.Options>
@@ -159,7 +155,7 @@ function Task({match}) {
             <input type="checkbox" checked={done} onChange={() => setDone(!done)}/>
             <span>CONCLUÍDO</span>
           </div>
-          <button type="button">EXCLUIR</button>
+          {match.params.id &&<button type="button" onClick={Remove}>EXCLUIR</button>}
         </S.Options>
 
         <S.Save>

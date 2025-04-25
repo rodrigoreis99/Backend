@@ -64,6 +64,7 @@ export const RightSide  = styled.div`
         &:hover{
             opacity: 0.5;
         }
+
     }
     
     .dividir::after{
@@ -71,4 +72,7 @@ export const RightSide  = styled.div`
         margin:0 10px;
         color: #F4F4F4;
     }
+    button{
+            font-size: 16px;
+        }
 `;

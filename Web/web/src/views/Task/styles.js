@@ -8,7 +8,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 overflow-y: auto;
-padding: 20px 0;
 `;
 
 export const Form = styled.div`
@@ -83,12 +82,15 @@ input{
         color:rgb(139, 137, 137);
 }
 
-img{
-        width:15px;
-        height:15px;
-        position:relative;
-        left:90%;
-        bottom:35px;
+input[type="date"],
+input[type="time"] {
+  color-scheme: dark;
+  cursor: pointer;
+
+    &::-webkit-calendar-picker-indicator {
+    filter: invert(38%) sepia(94%) saturate(734%) hue-rotate(356deg) brightness(99%) contrast(91%);
+    cursor: pointer;
+  }
 }
 
 `;
@@ -110,6 +112,7 @@ textarea{
         padding: 15px;
         border: 1px solid #ee6b26;
         background-color: #20103B;
+        color:rgb(139, 137, 137);
 }
 `
 export const Options = styled.div`
